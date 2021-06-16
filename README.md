@@ -1,34 +1,39 @@
-# Foobar
+# Getting Started with Stakater App Backend
 
-Foobar is a Python library for dealing with word pluralization.
+This NodeJS Backend project is part of the interview process at [Stakater] (https://stakater.com/) for Mike Ashley Cedric.
 
-## Installation
+## Available Scripts
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+In the project directory, you can run:
 
-```bash
-pip install foobar
 ```
-
-## Usage
-
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-
-docker build . -t mikeac1994/stakater-app-backend
-docker run -p 9001:9000 -d mikeac1994/stakater-app-backend
-curl -i localhost:9001/api
+npm start
 
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Runs the app in the development mode.\
+Open [http://localhost:9000](http://localhost:9000) to view it in the browser.
 
-Please make sure to update tests as appropriate.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+### Deployment
 
+To run the app in a dockerized environment, run the below commands to 1) build the docker image 2) run the docker image 
+
+```
+
+docker build -t stakater-app-backend .
+docker run -p 9002:9000 stakater-app-backend
+
+```
+
+### Testing
+
+Test the backend NodeJS app using the below curl
+
+```
+curl -i localhost:9002/api
+
+```
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
